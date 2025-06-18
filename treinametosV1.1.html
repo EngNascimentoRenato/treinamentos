@@ -1,0 +1,563 @@
+<!--V 1.1 : Implementado a busca por nome de equipamento, desativado botão de ver todos os setores-->>
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treinamentos Operacionais - Engenharia Clínica </title>
+  <link rel="stylesheet" href="CSS/estiloV1.1.css">
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="logo"></div>
+    <div class="title-container">
+      <a href="https://equipacare.com.br/" target="_blank">
+        <h1>Engenharia Clínica</h1>
+      </a>
+    </div>
+    <div class="logo_cba"></div>
+  </header>
+
+  <main class="container">
+
+    <h1 style="margin-bottom: 60px;">Treinamentos Operacionais em Equipamentos Médicos</h1>
+
+    <section class="sector-category" data-setor="centro-cirurgico"><!-- CENTRO CIRÚRGICO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Centro Cirúrgico <span class="arrow">&#9654;</span>
+      </h2>
+
+      <div class="equipment-cards">
+
+        <div class="card"><!-- Cardioversor Philips-->
+          <img src="imagens/dfm_100.jpg" alt="Cardioversor Philips DFM100">
+          <h3>Cardioversor | Philips DFM-100</h3>
+          <a href="https://forms.gle/cardioversorPhilips">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Mesa Cirurgica barrfab-->
+          <img src="imagens/mesa_cirurgica_barrfab.png" alt="Mesa Cirúrgica Barrfab">
+          <h3>Mesa Cirúrgica | Barrfab BF683 TDP</h3>
+          <a href="https://forms.gle/mesa_cirurgica_barrfab">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Monitor Philips-->
+          <img src="imagens/monitor-philips.png" alt="Monitor Philips Efficia">
+          <h3>Monitor Multiparâmetros | Philips Efficia</h3>
+          <a href="https://forms.gle/xgdswhyromyNBCbQ7">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Aspirador Fanem-->
+          <img src="imagens/aspirador-fanem.png" alt="Aspirador Fanem Colibri">
+          <h3>Aspirador Elétrico | Fanem DPM-60</h3>
+          <a href="https://forms.gle/K1vzW2ruwrX4ygSw6">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Sistema de Hipo-hipertermia-->
+          <img src="imagens/hipohipertermia.jpg" alt="Sistema de Hipo-hipertermia">
+          <h3>Sistema de Hipo-hipertermia | Hico Variotherm 550</h3>
+          <a href="https://forms.gle/hipohipertermia">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Termohigrômetro-->
+          <img src="imagens/termohigrometro.png" alt="Termohigrômetro">
+          <h3>Termômetro Digital Higrômetro</h3>
+          <a href="https://forms.gle/termohigrometro">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Aparelho de anestesia Drager-->
+          <img src="imagens/aparelho_anestesia_drager.jpg" alt="Aparelho de anestesia Drager Atlan A3xx">
+          <h3>Aparelho de Anestesia | Drager Atlan A300/350</h3>
+          <a href="https://forms.gle/VentiladorMagnamed">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Ventilador de transporte-->
+          <img src="imagens/ventilador_magnamed.png" alt="Ventilador de transporte Magnamed Oxymag">
+          <h3>Ventilador de transporte | Magnamed Oxymag</h3>
+          <a href="https://forms.gle/VentiladorMagnamed">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Torniquete Stryker-->
+          <img src="imagens/torniquete_stryker.png" alt="Compressor de membros Stryker Smartpump">
+          <h3>Compressor de membros | Stryker SmartPump</h3>
+          <a href="https://forms.gle/VentiladorMagnamed">Acessar Treinamento</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="sector-category" data-setor="uti"><!-- UTI-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: UTI <span class="arrow">&#9654;</span>
+      </h2>
+
+      <div class="equipment-cards">
+
+        <div class="card"><!-- Cardioversor Philips-->
+          <img src="imagens/dfm_100.jpg" alt="Cardioversor Philips DFM-100">
+          <h3>Cardioversor | Philips DFM-100</h3>
+          <a href="https://forms.gle/cardioversorPhilips">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Cardioversor Instramed Cardiomax8-->
+          <img src="imagens/cardioversor_instramed_cardiomax8.png" alt="Cardioversor Instramed Cardiomax 8">
+          <h3>Cardioversor | Instramed Cardiomax 8</h3>
+          <a href="https://forms.gle/cardioversorInstramedCarduiomax">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Monitor Philips-->
+          <img src="imagens/monitor-philips.png" alt="Monitor Philips Efficia">
+          <h3>Monitor Multiparâmetros | Philips Efficia</h3>
+          <a href="https://forms.gle/xgdswhyromyNBCbQ7">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!--ECG Alfamed-->
+          <img src="imagens/EcgAlfamed.png" alt="Eletrocardiógrafo Alfamed Ritmus1200">
+          <h3>Eletrocardiógrafo | Alfamed Ritmus1200</h3>
+          <a href="https://forms.gle/rPMk9cb5pHx5pRcH6" target="_blank">Acessar Treinamento</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="sector-category" data-setor="internacao"><!-- INTERNAÇÃO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Internação <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+
+        <div class="card"><!-- Monitor Philips-->
+          <img src="imagens/monitor-philips.png" alt="Monitor Philips Efficia">
+          <h3>Monitor Multiparâmetros | Philips Efficia</h3>
+          <a href="https://forms.gle/xgdswhyromyNBCbQ7">Acessar Treinamento</a>
+        </div>
+
+
+        <div class="card"><!-- Cardioversor Philips-->
+          <img src="imagens/dfm_100.jpg" alt="Cardioversor Philips DFM-100">
+          <h3>Cardioversor | Philips DFM-100</h3>
+          <a href="https://forms.gle/cardioversorPhilips">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- ECG Alfamed-->
+          <img src="imagens/EcgAlfamed.png" alt="Eletrocardiógrafo Alfamed Ritmus1200">
+          <h3>Eletrocardiógrafo | Alfamed Ritmus1200</h3>
+          <a href="https://forms.gle/rPMk9cb5pHx5pRcH6" target="_blank">Acessar Treinamento</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="sector-category" data-setor="pa"><!-- PRONTO ATENDIMENTO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Pronto Atendimento <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+        <div class="card"><!-- ECG Alfamed-->
+          <img src="imagens/EcgAlfamed.png" alt="Eletrocardiógrafo Alfamed Ritmus1200">
+          <h3>Eletrocardiógrafo | Alfamed Ritmus1200</h3>
+          <a href="https://forms.gle/rPMk9cb5pHx5pRcH6" target="_blank">Acessar Treinamento</a>
+        </div>
+
+        <div class="card"><!-- Cardioversor Instramed Cardiomax8-->
+          <img src="imagens/cardioversor_instramed_cardiomax8.png" alt="Cardioversor Instramed Cardiomax 8">
+          <h3>Cardioversor | Instramed Cardiomax 8</h3>
+          <a href="https://forms.gle/cardioversorInstramedCarduiomax">Acessar Treinamento</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="farmacia"><!-- FARMÁCIA-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Farmácia <span class="arrow">&#9654;</span>
+      </h2>
+
+      <div class="equipment-cards">
+        <div class="card"><!-- Estufa para soro Fanem-->
+          <img src="imagens/estufa-fanem.jpg" alt="Estufa para aquecimento de soro Fanem">
+          <h3>Estufa para Aquecimento de Soro | Fanem 2503/1</h3>
+          <a href="https://forms.gle/e3GST5oeCh3WVLZP9" target="_blank">Acessar Treinamento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="imagem"><!--DIAGNÓSTICO POR IMAGEM-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Diagnóstico por Imagem <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="infusao"><!--INFUSÃO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Centro de Infusão <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="cme"><!-- CME-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: CME <span class="arrow">&#9654;</span>
+      </h2>
+
+      <div class="equipment-cards">
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="ambulatorio"><!-- AMBULATÓRIO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Ambulatório <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+        <div class="card"><!-- ECG Alfamed-->
+          <img src="imagens/EcgAlfamed.png" alt="Eletrocardiógrafo Alfamed Ritmus1200">
+          <h3>Eletrocardiógrafo | Alfamed Ritmus1200</h3>
+          <a href="https://forms.gle/rPMk9cb5pHx5pRcH6" target="_blank">Acessar Treinamento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="centro-medico"><!--CENTRO MÉDICO-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Centro Médico <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+      </div>
+    </section>
+
+    <section class="sector-category" data-setor="feridas"><!--AMBULATÓRIO DE FERIDAS-->
+      <h2 class="sector-header" onclick="toggleSector(this)">
+        Setor: Ambulatório de Feridas <span class="arrow">&#9654;</span>
+      </h2>
+      <div class="equipment-cards">
+      </div>
+    </section>
+
+
+
+
+
+    <section id="filtered-results" class="filter-section" style="display: none;">
+      <h2 class="sector-header">
+        Resultados da Busca
+      </h2>
+      <div class="equipment-cards filtered-cards"></div>
+    </section>
+
+    <div id="equipment-search">
+      <input type="text" id="equipmentSearchInput" placeholder="Buscar por equipamento...">
+      <div id="equipmentList" class="equipment-list"></div>
+    </div>
+
+
+    <div id="filters">
+      <div class="button-group">
+        <button id="showAllSectorsBtn" class="common-button">
+          Ver Todos os Setores
+        </button>
+
+        <a href="https://equipacare-edu.com.br/" class="common-button equipacare-edu-button" target="_blank">
+          EquipacareEdu
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 [Equipacare]. Todos os direitos reservados.</p>
+  </footer>
+
+
+  <script>
+    function toggleSector(header) {
+      const section = header.parentElement;
+      const cards = section.querySelector('.equipment-cards');
+      const arrow = header.querySelector('.arrow');
+
+      cards.classList.toggle('collapsed');
+      header.classList.toggle('open');
+    }
+
+    // Iniciar todos abertos
+    document.querySelectorAll('.equipment-cards').forEach(el => {
+      el.classList.add('open');
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Primeiro inicializa todos os setores como abertos
+      document.querySelectorAll('.sector-category').forEach(section => {
+        const header = section.querySelector('.sector-header');
+        const cards = section.querySelector('.equipment-cards');
+
+        // Remove todas as classes que possam estar interferindo
+       // header.classList.remove('collapsed', 'open');
+        //cards.classList.remove('collapsed', 'open');
+
+        // Adiciona as classes corretas
+        header.classList.add('open');
+        cards.style.display = 'grid'; // Força o display grid
+      });
+
+      // 2. Depois verifica os parâmetros da URL
+      const params = new URLSearchParams(window.location.search);
+      const setorParam = params.get("setor");
+
+      if (setorParam) {
+        document.querySelectorAll(".sector-category").forEach(section => {
+          const setor = section.getAttribute("data-setor");
+          if (setor !== setorParam) {
+            section.style.display = "none";
+          } else {
+            // Garante que o setor correto está visível e expandido
+            section.style.display = "block";
+            const cards = section.querySelector('.equipment-cards');
+            const header = section.querySelector('.sector-header');
+            cards.style.display = 'grid';
+            header.classList.add('open');
+          }
+        });
+      }
+
+      /* Código do botão "Ver Todos os Setores"
+      const showAllBtn = document.getElementById("showAllSectorsBtn");
+      if (showAllBtn) {
+        showAllBtn.addEventListener("click", () => {
+          window.location.href = window.location.pathname;
+        });
+      }*/
+
+      // Código do buscador de equipamentos
+      const searchInput = document.getElementById('equipmentSearchInput');
+      const equipmentList = document.getElementById('equipmentList');
+      const filteredResultsSection = document.getElementById('filtered-results');
+      const filteredCardsContainer = document.querySelector('.filtered-cards');
+      const allSections = document.querySelectorAll('.sector-category');
+      let currentSelectedIndex = -1;
+
+      // Botão para limpar busca
+      const clearSearchBtn = document.createElement('button');
+      clearSearchBtn.innerHTML = '×';
+      clearSearchBtn.className = 'clear-search-btn';
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        resetSearch();
+        searchInput.focus();
+      });
+      searchInput.parentNode.insertBefore(clearSearchBtn, searchInput.nextSibling);
+
+      // Extrai todos os nomes de equipamentos únicos
+      function extractUniqueEquipmentNames() {
+        const equipmentNames = new Set();
+        document.querySelectorAll('.card h3').forEach(card => {
+          const fullText = card.textContent;
+          const equipmentName = fullText.split('|')[0].trim();
+          equipmentNames.add(equipmentName);
+        });
+        return Array.from(equipmentNames).sort();
+      }
+
+      // Extrai cards únicos por equipamento+fabricante+modelo
+      function getUniqueEquipmentCards() {
+        const cardsMap = new Map();
+        document.querySelectorAll('.card').forEach(card => {
+          const key = card.querySelector('h3').textContent.trim();
+          if (!cardsMap.has(key)) {
+            cardsMap.set(key, card.cloneNode(true));
+          }
+        });
+        return Array.from(cardsMap.values());
+      }
+
+      const uniqueEquipmentNames = extractUniqueEquipmentNames();
+
+      // Mostra a lista de equipamentos (completa ou filtrada)
+      function showEquipmentList(filter = '', showAll = false) {
+        equipmentList.innerHTML = '';
+        let filtered = uniqueEquipmentNames;
+
+        if (!showAll && filter.length > 0) {
+          filtered = uniqueEquipmentNames.filter(name =>
+            name.toLowerCase().includes(filter.toLowerCase())
+          );
+        }
+
+        if (filtered.length === 0) {
+          equipmentList.style.display = 'none';
+          return;
+        }
+
+        filtered.forEach((name, index) => {
+          const div = document.createElement('div');
+          div.textContent = name;
+          div.addEventListener('click', () => {
+            searchInput.value = name;
+            equipmentList.style.display = 'none';
+            showFilteredResults(name);
+          });
+          div.addEventListener('mouseover', () => {
+            currentSelectedIndex = index;
+            updateSelectedItem();
+          });
+          equipmentList.appendChild(div);
+        });
+
+        equipmentList.style.display = 'block';
+        currentSelectedIndex = -1;
+        updateSelectedItem();
+      }
+
+      // Atualiza o item selecionado na lista
+      function updateSelectedItem() {
+        const items = equipmentList.querySelectorAll('div');
+        items.forEach((item, index) => {
+          item.classList.toggle('selected', index === currentSelectedIndex);
+        });
+      }
+
+      // Mostra os resultados filtrados
+      function showFilteredResults(equipmentName) {
+        // Oculta todas as seções de setores
+        allSections.forEach(section => {
+          section.style.display = 'none';
+        });
+
+        // Limpa resultados anteriores
+        filteredCardsContainer.innerHTML = '';
+
+        // Obtém cards únicos que correspondem à busca
+        const uniqueCards = getUniqueEquipmentCards();
+        const matchingCards = uniqueCards.filter(card => {
+          const cardText = card.querySelector('h3').textContent;
+          return cardText.includes(equipmentName);
+        });
+
+        if (matchingCards.length > 0) {
+          matchingCards.forEach(card => {
+            filteredCardsContainer.appendChild(card);
+          });
+          filteredResultsSection.style.display = 'block';
+        } else {
+          filteredResultsSection.style.display = 'none';
+        }
+      }
+
+      // Reseta para mostrar todos os setores
+      function resetSearch() {
+        searchInput.value = '';
+        equipmentList.style.display = 'none';
+
+        // Verifica se há parâmetro de setor na URL
+        const params = new URLSearchParams(window.location.search);
+        const setorParam = params.get("setor");
+
+        if (setorParam) {
+          // Mostra apenas o setor correspondente ao parâmetro
+          document.querySelectorAll(".sector-category").forEach(section => {
+            const setor = section.getAttribute("data-setor");
+            section.style.display = setor === setorParam ? "block" : "none";
+
+            if (setor === setorParam) {
+              const cards = section.querySelector('.equipment-cards');
+              const header = section.querySelector('.sector-header');
+              cards.style.display = 'grid';
+              header.classList.add('open');
+            }
+          });
+        } else {
+          // Se não houver parâmetro, mostra todos os setores
+          document.querySelectorAll(".sector-category").forEach(section => {
+            section.style.display = "block";
+          });
+        }
+
+        filteredResultsSection.style.display = 'none';
+      }
+
+
+      // Event listeners
+      searchInput.addEventListener('click', () => {
+        if (searchInput.value.length === 0) {
+          showEquipmentList('', true);
+        } else {
+          showEquipmentList(searchInput.value);
+        }
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value;
+        if (searchTerm.length > 0) {
+          showEquipmentList(searchTerm);
+        } else {
+          resetSearch(); 
+        }
+      });
+
+      searchInput.addEventListener('focus', () => {
+        if (searchInput.value.length === 0) {
+          showEquipmentList('', true);
+        } else {
+          showEquipmentList(searchInput.value);
+        }
+      });
+
+      // Navegação com teclado
+      searchInput.addEventListener('keydown', (e) => {
+        const items = equipmentList.querySelectorAll('div');
+        if (items.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          currentSelectedIndex = Math.min(currentSelectedIndex + 1, items.length - 1);
+          updateSelectedItem();
+          items[currentSelectedIndex].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          currentSelectedIndex = Math.max(currentSelectedIndex - 1, -1);
+          updateSelectedItem();
+          if (currentSelectedIndex >= 0) {
+            items[currentSelectedIndex].scrollIntoView({ block: 'nearest' });
+          }
+        } else if (e.key === 'Enter' && currentSelectedIndex >= 0) {
+          e.preventDefault();
+          const selectedItem = items[currentSelectedIndex];
+          searchInput.value = selectedItem.textContent;
+          equipmentList.style.display = 'none';
+          showFilteredResults(selectedItem.textContent);
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !equipmentList.contains(e.target)) {
+          equipmentList.style.display = 'none';
+        }
+      });
+    });
+
+
+
+    console.log("Setor param:", setorParam);
+    document.querySelectorAll(".sector-category").forEach(section => {
+      console.log("Setor:", section.getAttribute("data-setor"),
+        "Display:", section.style.display,
+        "Classes:", section.querySelector('.sector-header').className);
+    });
+
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+.sector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+
+.equipment-cards {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.5s ease;
+}
+
+.equipment-cards.collapsed {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.sector-header.open .arrow {
+  transform: rotate(90deg);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+  max-width: 1200px;
+      margin: auto;
+margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 140px;
+  padding: 0 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+  position: absolute;
+  left: 30px;
+  width: 220px;
+  height: 90px;
+  background-image: url("../imagens/logo-equipacare2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo_cba {
+  position: absolute;
+  left: 1000px;
+  width: 190px;
+  height: 90px;
+  background-image: url("../imagens/logo-unimed-cuiaba.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.title-container {
+  text-align: center;
+}
+
+.title-container h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #153664;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #153664;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.sector-category {
+    margin-bottom: 50px;
+}
+
+.sector-category h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.equipment-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.card a {
+    display: block;
+    padding: 10px 0;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    position: relative;
+    overflow: hidden;
+}
+
+.card a:hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+}
+.button-group {
+    margin-top: 15px; 
+    text-align: center;
+    
+}
+
+.common-button {
+    background-color: #34495e; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 0 5px;
+    transition: background-color 0.2s ease; 
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+
+.common-button:hover {
+    background-color: #4a637c; 
+}
+
+
+
+
+
+
+
+
+/* Estilos para o buscador de equipamentos */
+#equipment-search {
+  margin: 30px 0 20px;
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#equipmentSearchInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.equipment-list {
+  position: absolute;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  display: none;
+}
+
+.equipment-list div {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.equipment-list div:hover {
+  background-color: #f5f5f5;
+}
+
+.equipment-list div:last-child {
+  border-bottom: none;
+}
+
+
+/* Estilos para a seção de filtro */
+.filter-section {
+  margin-bottom: 50px;
+}
+
+.filter-section h2 {
+  color: #0056b3;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.filtered-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.clear-search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+    
+    .equipment-list div.selected {
+      background-color: #e0e0e0;
+    }
+    
+    #equipment-search {
+      position: relative;
+    }
+    
+    #equipmentSearchInput {
+      padding-right: 30px;
+    }
