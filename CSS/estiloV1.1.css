@@ -13,9 +13,23 @@
 
 
 .equipment-cards {
-  overflow: hidden;
+  display: flex;
+  overflow: auto;
   max-height: 1000px;
   transition: max-height 0.5s ease;
+  gap: 16px;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.equipment-cards::-webkit-scrollbar {
+  height: 6px;
+}
+
+.equipment-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
 }
 
 .equipment-cards.collapsed {
@@ -118,6 +132,11 @@ h1 {
 }
 
 .card {
+
+
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
