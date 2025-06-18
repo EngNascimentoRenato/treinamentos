@@ -13,7 +13,9 @@
 
 
 .equipment-cards {
-  display: flex;
+  Display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
   overflow: auto;
   max-height: 1000px;
   transition: max-height 0.5s ease;
@@ -21,6 +23,8 @@
   padding-bottom: 16px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+
+    
 }
 
 .equipment-cards::-webkit-scrollbar {
@@ -125,15 +129,10 @@ h1 {
     margin-bottom: 30px;
 }
 
-.equipment-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
 
 .card {
-
-
+    min-width: 200px;
+    flex: 1 1 calc(33.333% - 16px); /* 3 por linha */
     min-width: 250px;
     flex: 0 0 auto;
     scroll-snap-align: start;
@@ -146,9 +145,6 @@ h1 {
     transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
 
 .card img {
     width: 100%;
@@ -237,12 +233,34 @@ footer {
     background-color: #4a637c; 
 }
 
+.search-wrapper {
+  position: relative;
+}
 
+/* Input com espaço para o botão */
+#equipmentSearchInput {
+  width: 100%;
+  padding: 12px 40px 12px 15px; /* Espaço à direita para o botão */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
 
-
-
-
-
+/* Botão "×" posicionado corretamente */
+.clear-search-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+  z-index: 10;
+}
 
 /* Estilos para o buscador de equipamentos */
 #equipment-search {
@@ -263,9 +281,9 @@ footer {
 }
 
 .equipment-list {
-  position: absolute;
+  position: relative;  /*ou remova */
   width: 100%;
-  max-height: 300px;
+  max-height: 40vh; /* altura máxima proporcional à tela */
   overflow-y: auto;
   background: white;
   border: 1px solid #ddd;
@@ -290,7 +308,7 @@ footer {
 }
 
 
-/* Estilos para a seção de filtro */
+
 .filter-section {
   margin-bottom: 50px;
 }
@@ -328,6 +346,14 @@ footer {
       position: relative;
     }
     
-    #equipmentSearchInput {
-      padding-right: 30px;
-    }
+  
+
+    @media (min-width: 768px) {
+  .equipment-cards {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+}
+
