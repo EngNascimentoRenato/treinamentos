@@ -13,7 +13,7 @@
 
 
 .equipment-cards {
-  Display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   overflow: auto;
@@ -81,8 +81,8 @@ margin-bottom: 30px;
 }
 
 .logo_cba {
+  right: 30px; 
   position: absolute;
-  left: 1000px;
   width: 190px;
   height: 90px;
   background-image: url("../imagens/logo-unimed-cuiaba.png");
@@ -182,9 +182,6 @@ footer {
     font-size: 0.9em;
 }
 
-.card {
-    transition: all 0.3s ease;
-}
 
 .card:hover {
     transform: translateY(-5px);
@@ -233,34 +230,8 @@ footer {
     background-color: #4a637c; 
 }
 
-.search-wrapper {
-  position: relative;
-}
 
-/* Input com espaço para o botão */
-#equipmentSearchInput {
-  width: 100%;
-  padding: 12px 40px 12px 15px; /* Espaço à direita para o botão */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-}
 
-/* Botão "×" posicionado corretamente */
-.clear-search-btn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #999;
-  z-index: 10;
-}
 
 /* Estilos para o buscador de equipamentos */
 #equipment-search {
@@ -271,14 +242,7 @@ footer {
   margin-right: auto;
 }
 
-#equipmentSearchInput {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+
 
 .equipment-list {
   position: relative;  /*ou remova */
@@ -326,17 +290,7 @@ footer {
   gap: 25px;
 }
 
-.clear-search-btn {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      color: #999;
-    }
+    
     
     .equipment-list div.selected {
       background-color: #e0e0e0;
@@ -357,3 +311,41 @@ footer {
 
 }
 
+@media (min-width: 768px) {
+  .equipment-cards {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+}
+
+.common-button:focus {
+  outline: 2px solid #007bff;
+}
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+
+.search-wrapper input[type="text"] {
+  width: 100%;
+  padding: 10px 36px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
