@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
@@ -23,6 +24,14 @@
   <main class="container">
 
     <h1 style="margin-bottom: 60px;">Treinamentos Operacionais em Equipamentos Médicos</h1>
+
+    <div id="equipment-search" class="search-wrapper">
+  <input type="text" id="equipmentSearchInput" placeholder="Buscar por equipamento...">
+  
+  <button type="button" class="clear-search-btn" onclick="clearSearch()">×</button>
+  <div id="equipmentList" class="equipment-list"></div>
+</div>
+
 
     <section class="sector-category" data-setor="centro-cirurgico"><!-- CENTRO CIRÚRGICO-->
       <h2 class="sector-header" onclick="toggleSector(this)">
@@ -249,12 +258,7 @@
       <div class="equipment-cards filtered-cards"></div>
     </section>
 
-    <div id="equipment-search">
-      <input type="text" id="equipmentSearchInput" placeholder="Buscar por equipamento...">
-      <div id="equipmentList" class="equipment-list"></div>
-    </div>
     
-
 
     <div id="filters">
       <div class="button-group">
@@ -269,8 +273,10 @@
 
   </main>
 
+  
+
   <footer>
-    <p>&copy; 2025 [Equipacare]. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Equipacare. Todos os direitos reservados.</p>
   </footer>
 
 
@@ -499,13 +505,11 @@
         }
       });
 
-      searchInput.addEventListener('focus', () => {
-        if (searchInput.value.length === 0) {
-          showEquipmentList('', true);
-        } else {
-          showEquipmentList(searchInput.value);
-        }
-      });
+     searchInput.addEventListener('focus', () => {
+  searchInput.value = ''; 
+  showEquipmentList('', true); 
+});
+
 
       // Navegação com teclado
       searchInput.addEventListener('keydown', (e) => {
@@ -541,16 +545,23 @@
     });
 
 
+function clearSearch() {
+  // Limpa o campo de busca
+  document.getElementById('equipmentSearchInput').value = '';
 
-    console.log("Setor param:", setorParam);
-    document.querySelectorAll(".sector-category").forEach(section => {
-      console.log("Setor:", section.getAttribute("data-setor"),
-        "Display:", section.style.display,
-        "Classes:", section.querySelector('.sector-header').className);
-    });
+  // Pega a URL atual e seus parâmetros
+  const url = new URL(window.location.href);
+  const setor = url.searchParams.get('setor');
 
+  // Monta a nova URL base com ?setor=... se existir
+  let newUrl = window.location.origin + window.location.pathname;
+  if (setor) {
+    newUrl += '?setor=' + encodeURIComponent(setor);
+  }
 
-
+  // Redireciona para a nova URL
+  window.location.href = newUrl;
+}
 
   </script>
 
